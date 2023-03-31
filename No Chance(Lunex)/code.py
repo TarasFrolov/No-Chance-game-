@@ -185,7 +185,7 @@ while True: # цикал игры.
     music(step)
 
     step = turn(storyDict, step)
-    clean2dot0()
+    
     AutoSave(step)
     if step == "end":
         AutoSave('1')
@@ -196,4 +196,5 @@ while True: # цикал игры.
             step = '1'
         else:
             break
+    clean2dot0()
 
