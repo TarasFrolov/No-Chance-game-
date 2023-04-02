@@ -16,9 +16,15 @@ def clean2dot0():
 
 # Отвечает за музыку в игре
 def music(n):
-    namefile = "music\\" + n + '.mp3'
-    pygame.mixer.music.load(namefile)
-    pygame.mixer.music.play(-1)
+    if platform == "win32" or platform == "cygwin":
+        namefile = "music\\" + n + '.mp3'
+        pygame.mixer.music.load(namefile)
+        pygame.mixer.music.play(-1)
+    else:
+        namefile = "music\\" + n + '.mp3'
+        pygame.mixer.music.load(namefile)
+        pygame.mixer.music.play(-1)
+
 
 
 # Функция команды "Авто прохождение" отвечающая за хождению по псевдо-графу.
